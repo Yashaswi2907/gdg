@@ -1,0 +1,96 @@
+:root{
+  --accent: #0ef;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --muted: #666;
+  --shadow: rgba(10,10,30,0.08);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background:var(--bg);
+  color:#222;
+  min-height:100vh;
+}
+
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:linear-gradient(90deg,#081226, #0b1530);
+  color:white;
+  gap:12px;
+}
+.topbar h1{font-size:18px;margin:0}
+.top-actions{display:flex;align-items:center;gap:8px}
+.top-actions button{
+  background:var(--accent); color:#04121b;border:none;padding:8px 10px;border-radius:6px;cursor:pointer;font-weight:600;
+}
+.top-actions .template-switch{color:#fff;font-size:13px;display:flex;align-items:center;gap:6px}
+
+
+.container{display:flex;gap:20px;padding:20px;align-items:flex-start}
+.panel{border-radius:10px;box-shadow:0 6px 18px var(--shadow);background:var(--card);padding:16px}
+.form-panel{width:38%}
+.preview-panel{width:62%;min-height:520px;}
+
+
+.card{border-radius:8px;padding:12px;border:1px solid #eef2f6;margin-bottom:14px;background:#fff}
+.card h3{margin:0 0 10px 0;color:#143145}
+input[type="text"], input[type="email"], input[type="range"]{
+  width:100%;
+  padding:8px 10px;border-radius:6px;border:1px solid #dde7ef;margin-top:6px;
+}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.row input{flex:1;min-width:120px}
+.small{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+
+
+#education-list .entry,
+#experience-list .entry,
+#project-list .entry,
+#skill-list .entry {
+  display:flex;align-items:center;gap:8px;padding:6px;border-radius:6px;margin:6px 0;background:#f7fbff;border:1px solid #e6f0fb;
+}
+.entry .meta{flex:1;font-size:14px;color:#163044}
+.entry button{background:transparent;border:none;color:#c23;cursor:pointer}
+
+
+#preview-root{padding:18px;background:linear-gradient(180deg,#fff,#fbfdff);border-radius:8px}
+.resume-header{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.resume-header h1{margin:0;font-size:26px;color:#04121b}
+.resume-header p{margin:0;color:var(--muted)}
+
+.resume-section{margin-top:14px}
+.resume-section h2{margin:0 0 8px 0;color:var(--accent);font-size:16px}
+.resume-section ul{list-style:none;padding-left:0;margin:0}
+.resume-section li{padding:8px;border-left:4px solid #e9f5ff;margin-bottom:8px;background:#f9fdff;border-radius:6px}
+
+
+.skills-grid{display:flex;gap:10px;flex-wrap:wrap}
+.skill-card{width:48%;background:#fbfdff;padding:8px;border-radius:6px;border:1px solid #eef7ff}
+.skill-card .skill-name{font-weight:700;font-size:13px;margin-bottom:6px}
+.skill-card .bar{height:8px;background:#e6f7ff;border-radius:10px;overflow:hidden}
+.skill-card .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#00c8ff);width:50%;transition:width .4s ease}
+
+
+.template-modern .resume-header{flex-direction:row;justify-content:space-between;align-items:center}
+.template-modern .resume-header h1{font-size:28px;color:#04243f}
+.template-modern .resume-section h2{color:#0a6b9a}
+
+
+.top-actions button:active{transform:translateY(1px)}
+.entry{animation:entryIn .35s ease}
+@keyframes entryIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+
+@media print{
+  body{background:#fff}
+  .form-panel, .topbar, .footer-note, .top-actions{display:none}
+  .preview-panel{width:100%;box-shadow:none;border:none}
+  #preview-root{box-shadow:none;background:#fff}
+}
