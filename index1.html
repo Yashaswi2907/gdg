@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+  
+  <div class="navbar">
+    <div class="nav1a">Resume Builder</div>
+    <div class="nav1b">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  
+  <div class="main-container">
+    <!-- Left side: Form -->
+    <div class="form-section">
+      <h2>Build Your Resume</h2>
+      
+      
+      <label>Name: <input type="text" id="nameInput"></label>
+      <label>Email: <input type="text" id="emailInput"></label>
+      <label>LinkedIn: <input type="text" id="linkedinInput"></label>
+
+      
+      <div id="educationInputs">
+        <h3>Education</h3>
+        <div class="edu-entry">
+          <input type="text" placeholder="School/College">
+          <input type="text" placeholder="Degree">
+          <input type="text" placeholder="Year">
+        </div>
+      </div>
+      <button type="button" onclick="addEducation()">+ Add Education</button>
+
+      
+      <div id="projectInputs">
+        <h3>Projects</h3>
+        <div class="proj-entry">
+          <input type="text" placeholder="Project Title">
+          <input type="text" placeholder="Description">
+        </div>
+      </div>
+      <button type="button" onclick="addProject()">+ Add Project</button>
+    </div>
+
+    
+    <div class="resume-preview" id="resumePreview">
+      <h1 id="previewName">Your Name</h1>
+      <p id="previewEmail">your.email@example.com</p>
+      <p id="previewLinkedIn">linkedin.com/in/yourprofile</p>
+
+      <h2>Education</h2>
+      <ul id="previewEducation">
+        <li>School / Degree / Year</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul id="previewProjects">
+        <li>Project Title - Description</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
