@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Interactive Resume Builder</h1>
+    <div class="top-actions">
+      <label class="template-switch">
+        <input type="radio" name="template" value="classic" checked> Classic
+      </label>
+      <label class="template-switch">
+        <input type="radio" name="template" value="modern"> Modern
+      </label>
+      <button id="btnSave">Save</button>
+      <button id="btnLoad">Load</button>
+      <button id="btnClear">Clear</button>
+      <button id="btnPrint">Download PDF</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- LEFT: FORM -->
+    <section class="panel form-panel">
+      <h2>Fill Details</h2>
+
+      <!-- Personal -->
+      <div class="card">
+        <h3>Personal</h3>
+        <input id="name" maxlength="50" placeholder="Full name (max 50 chars)" />
+        <input id="email" placeholder="Email" />
+        <input id="phone" placeholder="Phone / Contact" />
+        <input id="website" placeholder="Website / Portfolio link" />
+        <input id="linkedin" placeholder="LinkedIn / Social link" />
+      </div>
+
+      <!-- Education -->
+      <div class="card">
+        <h3>Education</h3>
+        <div id="education-list"></div>
+        <div class="row">
+          <input id="edu-school" placeholder="School / College" />
+          <input id="edu-degree" placeholder="Degree" />
+          <input id="edu-year" placeholder="Year (e.g. 2023)" />
+        </div>
+        <div class="row">
+          <button id="add-education">+ Add Education</button>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="card">
+        <h3>Experience</h3>
+        <div id="experience-list"></div>
+        <div class="row">
+          <input id="exp-role" placeholder="Role (e.g. Intern)" />
+          <input id="exp-company" placeholder="Company" />
+          <input id="exp-duration" placeholder="Duration (e.g. 2022 - 2023)" />
+        </div>
+        <div class="row">
+          <input id="exp-desc" placeholder="Short description" />
+        </div>
+        <div class="row">
+          <button id="add-experience">+ Add Experience</button>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="card">
+        <h3>Projects</h3>
+        <div id="project-list"></div>
+        <div class="row">
+          <input id="proj-title" placeholder="Project Title" />
+          <input id="proj-link" placeholder="Link (optional)" />
+        </div>
+        <div class="row">
+          <input id="proj-desc" placeholder="Short description" />
+        </div>
+        <div class="row">
+          <button id="add-project">+ Add Project</button>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="card">
+        <h3>Skills</h3>
+        <div id="skill-list"></div>
+        <div class="row">
+          <input id="skill-name" placeholder="Skill name (e.g. HTML)" />
+          <label class="small">Level <input id="skill-level" type="range" min="0" max="100" value="75" /></label>
+          <span id="skill-level-val">75%</span>
+        </div>
+        <div class="row">
+          <button id="add-skill">+ Add Skill</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: PREVIEW -->
+    <section class="panel preview-panel">
+      <div id="preview-root" class="template-classic">
+        <div class="resume-header">
+          <h1 id="preview-name">Your Name</h1>
+          <p id="preview-contact">Email · Phone · Website</p>
+        </div>
+
+        <div class="resume-section">
+          <h2>Education</h2>
+          <ul id="preview-education"></ul>
+        </div>
+
+        <div class="resume-section">
+          <h2>Experience</h2>
+          <ul id="preview-experience"></ul>
+        </div>
+
+        <div class="resume-section">
+          <h2>Projects</h2>
+          <ul id="preview-projects"></ul>
+        </div>
+
+        <div class="resume-section">
+          <h2>Skills</h2>
+          <div id="preview-skills" class="skills-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    <small>Interactive Resume Builder — form inputs auto-save. Use "Download PDF" to export.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
