@@ -1,0 +1,374 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  height: 7%;
+  width: 100%;
+  background-color: rgb(16, 16, 42);
+  color: white;
+  display: flex;
+  position: absolute;
+  padding: 5px 5px;
+}
+
+.nav1a {
+  height: 100%;
+  width: 25%;
+  font-size: 18px;
+  padding-top: 8px;
+  padding-left: 110px;
+  align-items: center;
+  transition: 3s;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 2s ease forwards;
+}
+
+.nav1b {
+  height: 100%;
+  width: 60%;
+  font-size: 18px;
+  padding-left: 130px;
+  margin-left: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 2s;
+  opacity: 0;
+  cursor: default;
+  animation: slideTop 1s ease forwards;
+}
+
+.nav1b a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Page 1 */
+.page1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: rgba(13, 24, 31, 0.921);
+}
+
+.page1left {
+  height: 70%;
+  width: 40%;
+  padding-left: 110px;
+  margin-top: 11%;
+  color: white;
+}
+
+.page1left h1 {
+  font-weight: 600;
+  font-size: 40px;
+  transition: 1s;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.page1left h3 {
+  font-weight: 500;
+  font-size: 20px;
+  transition: 1s;
+  opacity: 0;
+  cursor: default;
+  animation: slideTop 1s ease forwards;
+}
+
+.page1left h3 span {
+  color: #0ef;
+}
+
+.page1left p {
+  padding-top: 45px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  transition: 2s;
+  cursor: default;
+  opacity: 0;
+  animation: slideLeft 2s ease forwards;
+}
+
+.page1left button {
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  margin-top: 65px;
+  letter-spacing: 1px;
+  background-color: #0ef;
+  transform: 3s;
+  animation: slideBottom 3s ease forwards;
+}
+
+.page1left button:hover {
+  box-shadow: 0 0 25px cyan;
+}
+
+.page1right {
+  height: 100%;
+  width: 50%;
+}
+
+.page1right .photo {
+  height: 50%;
+  width: 50%;
+  background-image: url(/shivu.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-top: 170px;
+  margin-left: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(103, 40, 119), 0 0 40px rgb(154, 95, 7),
+    0 0 60px rgb(59, 39, 161), 0 0 80px #0ef;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.page1right .photo:hover {
+  box-shadow: 0 0 30px #0ef, 0 0 60px #0ef, 0 0 90px #0ef;
+}
+
+/* Icons */
+.icon {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 325px;
+}
+
+.icon a {
+  font-size: 30px;
+  color: #0ef;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 40%;
+  transition: 3s;
+  animation: slideRight 3s ease forwards;
+}
+
+.icon a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+/* Page 2 */
+.page2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(13, 24, 31, 0.921);
+  display: flex;
+}
+
+.page2 .img2 {
+  height: 50%;
+  width: 25%;
+  background-image: url(/shivu.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-left: 110px;
+  margin-top: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(103, 40, 119), 0 0 40px rgb(154, 95, 7),
+    0 0 60px rgb(59, 39, 161), 0 0 80px #0ef;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.page2 .text2 {
+  height: 80%;
+  width: 40%;
+  color: white;
+  margin-left: 230px;
+}
+
+.page2 .text2 h1 {
+  padding-left: 200px;
+}
+
+.page2 .text2 h3 {
+  padding-left: 188px;
+  padding-top: 10px;
+}
+
+.page2 .text2 p {
+  padding-top: 10px;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+/* Page 3 */
+.page3 {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(13, 24, 31, 0.921);
+}
+
+.page3 .box1,
+.page3 .box2 {
+  height: 40%;
+  width: 65%;
+  margin-left: 230px;
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+}
+
+.page3 .a,
+.page3 .b,
+.page3 .c,
+.page3 .d,
+.page3 .e,
+.page3 .f {
+  height: 90%;
+  width: 40%;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.page3 .a:hover,
+.page3 .b:hover,
+.page3 .c:hover,
+.page3 .d:hover,
+.page3 .e:hover,
+.page3 .f:hover {
+  box-shadow: 0 0 46px #0ef;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Page 4 */
+.page4 {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(13, 24, 31, 0.921);
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+  color: white;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.technical-skills,
+.professional-skills {
+  flex: 1 1 40%;
+}
+
+.technical-skills h2,
+.professional-skills h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  margin-top: 70px;
+}
+
+.bar {
+  width: 70%;
+  height: 10px;
+  background: #444;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.fill {
+  height: 100%;
+  background: #0ef;
+}
+
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 90px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#0ef calc(var(--percent) * 1%), #333 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 700;
+}
+
+.circle span {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+}
