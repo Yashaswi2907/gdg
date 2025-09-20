@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: rgba(13, 24, 31, 0.95);
+  color: white;
+}
+
+
+.navbar {
+  height: 7%;
+  width: 100%;
+  background-color: rgb(16, 16, 42);
+  color: white;
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+.nav1a {
+  width: 25%;
+  font-size: 20px;
+  padding-left: 40px;
+}
+.nav1b {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav1b a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 40px;
+}
+
+
+.form-section, .resume-preview {
+  width: 45%;
+  background: rgba(20, 30, 40, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.form-section input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 90%;
+  border-radius: 6px;
+  border: none;
+}
+.form-section button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #0ef;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+.form-section button:hover {
+  box-shadow: 0 0 20px cyan;
+}
+
+.resume-preview h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.resume-preview h2 {
+  margin-top: 20px;
+  font-size: 22px;
+  text-decoration: underline;
+}
+.resume-preview ul {
+  list-style: none;
+  margin-top: 10px;
+}
+.resume-preview ul li {
+  margin-bottom: 5px;
+}
